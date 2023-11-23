@@ -1,0 +1,144 @@
+{
+  "menu": [
+    {
+      "url": "/dashboard",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard",
+      "permissions": ["dashboard-read"]
+    },
+    {
+      "menuHeader": "Aplikasi",
+      "permissions": [
+        "buku-read",
+        "buku-create",
+        "buku-edit",
+        "buku-delete",
+        "daftar-peminjaman",
+        "pengajuan-read",
+        "pengajuan-create",
+        "pengajuan-edit",
+        "pengajuan-delete",
+        "histori-pengajuan"
+      ]
+    },
+    {
+      "name": "Buku",
+      "icon": "menu-icon tf-icons bx bxs-book",
+      "slug": "books",
+      "permissions": [
+        "buku-read",
+        "buku-create",
+        "buku-edit",
+        "buku-delete",
+        "daftar-peminjaman",
+        "pengajuan-read",
+        "pengajuan-create",
+        "pengajuan-edit",
+        "pengajuan-delete",
+        "histori-pengajuan",
+        "pengajuan-pinjaman"
+      ],
+      "submenu": [
+        {
+          "url": "/books/books",
+          "name": "Daftar Buku",
+          "slug": "books.index",
+          "permissions": [
+            "buku-read",
+            "buku-create",
+            "buku-edit",
+            "buku-delete"
+          ]
+        },
+        {
+          "url": "/books/borrowings",
+          "name": "Daftar Peminjaman",
+          "slug": ["borrowings.index"],
+          "permissions": [
+            "daftar-peminjaman"
+          ]
+        },
+        {
+          "url": "/books/submissions",
+          "name": "Pengajuan Peminjaman",
+          "slug": ["submissions.index"],
+          "permissions": [
+            "pengajuan-read",
+            "pengajuan-create",
+            "pengajuan-edit",
+            "pengajuan-delete"
+          ]
+        },
+        {
+          "url": "/books/submission-histories",
+          "name": "Histori Pengajuan",
+          "slug": ["histories.index"],
+          "permissions": [
+            "histori-pengajuan"
+          ]
+        },
+        {
+          "url": "/books/borrowing-books",
+          "name": "Peminjaman Buku",
+          "slug": ["borrowing-books.index"],
+          "permissions": [
+            "pengajuan-pinjaman"
+          ]
+        }
+      ]
+    },
+    {
+      "menuHeader": "Sistem",
+      "permissions": [
+        "akun-role-read",
+        "akun-role-create",
+        "akun-role-edit",
+        "akun-role-delete",
+        "akun-staff-read",
+        "akun-staff-create",
+        "akun-staff-edit",
+        "akun-staff-delete"
+      ]
+    },
+    {
+      "name": "Akun",
+      "icon": "menu-icon tf-icons bx bx-group",
+      "slug": "accounts",
+      "permissions": [
+        "akun-role-read",
+        "akun-role-create",
+        "akun-role-edit",
+        "akun-role-delete",
+        "akun-staff-read",
+        "akun-staff-create",
+        "akun-staff-edit",
+        "akun-staff-delete"
+      ],
+      "submenu": [
+        {
+          "url": "/accounts/access-rights",
+          "name": "Hak Akses",
+          "slug": "access-rights.index",
+          "permissions": [
+            "akun-role-read",
+            "akun-role-create",
+            "akun-role-edit",
+            "akun-role-delete"
+          ]
+        },
+        {
+          "url": "/accounts/personnels",
+          "name": "Personil",
+          "slug": "personnels.index",
+          "permissions": [
+            "akun-staff-read",
+            "akun-staff-create",
+            "akun-staff-edit",
+            "akun-staff-delete"
+          ]
+        }
+      ]
+    }
+  ]
+}
